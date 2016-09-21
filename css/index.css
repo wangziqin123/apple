@@ -1,0 +1,456 @@
+@import url(public.css);
+/**********大屏****************/
+#nav{
+    height:44px;
+    line-height:44px;
+    font-size: 16px;
+    color: #fff;
+    background: rgba(0,0,0,0.8);
+    position: relative;
+    z-index: 11131;
+}
+#nav .max-nav{
+    max-width:1024px;
+    height:44px;
+    margin: auto;
+    text-align: justify;
+  /*  text-align-last: justify;*/
+}
+#nav .max-nav:after{
+    content: "";
+    display: inline-block;
+    height: 0;
+    line-height: 0;
+    width:100%;
+}
+#nav .max-nav li{
+    display: inline-block;
+    height: 100%;
+    line-height: 44px;
+}
+#nav .max-nav li a{
+    height: 100%;
+    font-size:16px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+#nav .max-nav li a:hover{
+    color: #bbbbbb;
+}
+/************小屏**************/
+.min-nav{
+    width: 100%;
+    height: 100%;
+}
+.min-nav .navs{
+    height: 100%;
+    margin: 0 auto;
+    line-height: 44px;
+    text-align: justify;
+}
+.min-nav .navs:after{
+    content: "";
+    display: inline-block;
+    width:100%;
+    line-height: 0;
+    height: 0;
+}
+.min-nav .navs>div{
+    display: inline-block;
+    font-size:16px;
+    color: #ffffff;
+    vertical-align: middle;
+}
+.min-nav .navs .menu{
+    width: 30px;
+    height:30px;
+    line-height: 44px;
+    cursor: pointer;
+}
+.min-nav .navs .menu span{
+    width: 30px;
+    height:2px;
+    display: inline-block;
+    background: #fff;
+    margin-top: 10px;
+    float: left;
+    transition: all 0.5s;
+}
+#nav .min-nav .lists{
+    width:100%;
+    overflow: hidden;
+    background: #000;
+    display: none;
+}
+#nav .min-nav .lists>li{
+    width:80%;
+    overflow: hidden;
+    margin: auto;
+    border-bottom: 1px solid #fff;
+    text-align: left;
+}
+#nav .min-nav .lists>li a{
+    color: #fff;
+}
+/***************banner部分*************************/
+#banner{
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+}
+#banner .banner-box{
+    width:100%;
+    height:100%;
+    position: relative;
+}
+#banner .banner-box div{
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    background: #fff;
+    padding: 0;
+    display: none;
+}
+#banner .banner-box div:first-child{
+    z-index:215;
+}
+#banner .banner-box div a{
+    display: block;
+    width:100%;
+    height:100%;
+}
+#banner .banner-box div a span{
+    display: block;
+    margin:auto;
+    position: absolute;
+}
+#banner .banner-box div a .shang{
+    width:100%;
+    height:40px;
+    top:80px;
+}
+#banner .banner-box div a .xia{
+    width:100%;
+    line-height: 42px;
+    font-size: 25px;
+    text-align: center;
+    top:130px;
+    color:#333333;
+}
+#banner .btn{
+    width:100%;
+    height:75px;
+    cursor: pointer;
+    display: none;
+}
+#banner .btn .btn-left{
+    width:32px;
+    height:75px;
+    position: absolute;
+    left:0;top:50%;
+    z-index: 5555;
+    margin-top: -38px;
+    transform: rotate(-180deg);
+    background: url("../images/next.png") no-repeat;
+}
+#banner .btn .btn-right{
+    width:32px;
+    height:75px;
+    position: absolute;
+    right:0;top:50%;
+    z-index: 5555;
+    margin-top: -38px;
+    background: url("../images/next.png") no-repeat;
+}
+#banner .list{
+    width:200px;
+    height:20px;
+    position: absolute;
+    left:50%;
+    bottom:0;
+    margin-left: -100px;
+    z-index: 2626;
+}
+#banner .list .listxs{
+    width:20px;
+    height:20px;
+    background: #666666;
+    border-radius: 50%;
+    margin-left: 25px;
+    float: left;
+    cursor: pointer;
+}
+@media screen and (min-width: 768px){
+    #banner{
+        height:650px;
+    }
+    #banner .banner-box div:nth-child(1) a:first-child .shang{
+        background: url("../images/iphone_6s_medium.png") no-repeat center;
+    }
+    #banner .banner-box div:nth-child(1) a:first-child{
+        background: url("../images/iphone_6s_medium.jpg") no-repeat center bottom;
+    }
+    #banner .banner-box div:nth-child(2) a:first-child .shang{
+        background: url("../images/ipad_pro_medium.png") no-repeat center;
+    }
+    #banner .banner-box div:nth-child(2) a:first-child{
+        background: url("../images/ipad_pro_family_medium.jpg") no-repeat center 240px;
+    }
+    #banner .banner-box div:nth-child(3) a:first-child .shang{
+        background: url("../images/watch_medium.png") no-repeat center;
+    }
+    #banner .banner-box div:nth-child(3) a:first-child{
+        background: url("../images/apple_watch_trio_medium.jpg") no-repeat center;
+    }
+    #banner .banner-box div:nth-child(4) a:first-child .shang{
+        background: url("../images/mac.png") no-repeat center;
+    }
+    #banner .banner-box div:nth-child(4) a:first-child{
+        background: url("../images/macbook_medium.png") no-repeat center;
+    }
+}
+@media screen and (max-width:768px )  {
+    #banner{
+        height:500px;
+    }
+    #banner .banner-box div:nth-child(1) a span{
+       display: none;
+    }
+    #banner .banner-box div:nth-child(1) a:first-child{
+        background: url("../images/iphone_6s_small.jpg") no-repeat center ;
+    }
+    #banner .banner-box div:nth-child(2) a:first-child .shang{
+        background: url("../images/ipad_pro_medium.png") no-repeat center;
+    }
+    #banner .banner-box div:nth-child(2) a:first-child{
+        background: url("../images/ipad_pro_family_small.jpg") no-repeat center 240px;
+    }
+    #banner .banner-box div:nth-child(3) a:first-child .shang{
+        background: url("../images/watch_medium.png") no-repeat center;
+    }
+    #banner .banner-box div:nth-child(3) a:first-child{
+        background: url("../images/apple_watch_trio_small.jpg") no-repeat center;
+    }
+    #banner .banner-box div:nth-child(4) a:first-child .shang{
+        background: url("../images/mac.png") no-repeat center;
+    }
+    #banner .banner-box div:nth-child(4) a:first-child{
+        background: url("../images/macbook_small.png") no-repeat center;
+    }
+}
+
+/*********************商品推荐*********************************/
+
+#promos{
+    height:200px;
+    margin-top: 10px;
+    padding: 0;
+}
+#promos ul{
+    width:100%;
+    height:100%;
+    padding: 0;
+    /*background: red;*/
+}
+#promos ul li{
+    height:100%;
+    padding: 0;
+    float: left;
+    /*background: blue;*/
+    border: 1px solid #fff;
+}
+#promos ul li a{
+    display: inline-block;
+    width:100%;
+    height:100%;
+    background-size:640px 200px ;
+    background-repeat: no-repeat;
+    background-position: center ;
+}
+
+@media screen and (min-width: 768px) {
+    #promos ul li:nth-child(1) a{
+        background-image: url("../images/tradeup_medium.jpg");
+    }
+    #promos ul li:nth-child(2) a{
+         background-image: url("../images/public_betas_medium.jpg");
+     }
+    #promos ul li:nth-child(3) a{
+        background-image: url("../images/apple_music_exclusive_medium.jpg");
+    }
+    #promos ul li:nth-child(4) a{
+        background-image: url("../images/hp_tiles_lastchance_medium.jpg");
+    }
+
+}
+@media screen and (max-width: 768px) {
+    #promos ul li a{
+        background-size:736px 200px;
+    }
+    #promos ul li:nth-child(1) a{
+        background-image: url("../images/tradeup_small.jpg");
+    }
+    #promos ul li:nth-child(2) a{
+        background-image: url("../images/public_betas_small.jpg");
+    }
+    #promos ul li:nth-child(3) a{
+        background-image: url("../images/apple_music_exclusive_small.jpg");
+    }
+    #promos ul li:nth-child(4) a{
+        background-image: url("../images/hp_tiles_lastchance_small.jpg");
+    }
+}
+#link{
+    width:100%;
+    background: #f2f2f2;
+    padding-top: 30px;
+}
+#link .content{
+    width:980px;
+    height:auto;
+    margin: auto;
+    overflow: hidden;
+}
+#link .content .links{
+    width:20%;
+    height:auto;
+    float: left;;
+    overflow: hidden;
+    padding-right: 10px;
+    position: relative;
+}
+#link .content .links h3{
+    font-size: 12px;
+    font-weight: bold;
+}
+#link .content .links ul li a{
+    font-size: 12px;
+}
+#link .content .links .jia{
+    display: none;
+    position: absolute;
+    right:11px;
+    top:10px;
+}
+#link .content .links .jias{
+    top:55px;
+}
+#link .content .links .jia span:first-child{
+    display: inline-block;
+    width:11px;
+    height:1px;
+    background: #333;
+    transform-origin: 6px center ;
+}
+#link .content .links .jia span:last-child{
+    display: inline-block;
+    width:1px;
+    height:11px;
+    background: #333;
+    transform: translate(-10px,5px);
+    transform-origin: center 6px;
+}
+@media screen and (max-width: 768px){
+    #link .content{
+        width:100%;
+    }
+    #link .content .links{
+        width:100%;
+    }
+    #link .content .links h3{
+        cursor: pointer;
+        margin: 0;
+        padding:0;
+        border-bottom:1px solid #cccccc ;
+        line-height:44px;
+    }
+    #link .content .links ul{
+        display: none;
+    }
+    #link .content .links .jia{
+        display: block;
+        transition: all 1s ease;
+    }
+}
+/****************底部*************************/
+#footer {
+    width:100%;
+    background: #f2f2f2;
+    padding-top: 30px;
+}
+#footer .footers{
+    width:980px;
+    height:auto;
+    overflow: hidden;
+    margin: auto;
+    font-size: 12px;
+}
+#footer .footers .footers-shop{
+    width:100%;
+    line-height:26px;
+    border-bottom: 1px solid #ccc;
+}
+#footer .footers .footers-shop a{
+    color:#0070c9;
+}
+#footer .footers .footers-legal{
+    padding:5px 0;
+}
+#footer .footers .footers-legal span:first-child{
+    display: block;
+    float: left;
+    margin-right: 30px;
+    line-height:26px;
+}
+#footer .footers .footers-legal .lianjie{
+    float: left;
+}
+#footer .footers .footers-legal .lianjie a{
+    color:#333;
+    line-height:26px;
+    margin-left: 10px;
+    padding-right: 10px;
+    border-right:1px solid #333;
+}
+#footer .footers .footers-legal .zhongguo{
+    display: inline-block;
+    cursor: pointer;
+    border-right: none;
+    float: right;
+    padding-left: 16px;
+    background: url("../images/china.png") no-repeat left;
+}
+#footer .footers .footers-beian {
+    width:100%;
+    line-height: 26px;
+    padding-bottom: 5px;
+    overflow: hidden;
+}
+@media screen and (max-width: 768px){
+    #footer .footers{
+        width:100%;
+    }
+    #footer .footers .footers-shop{
+        width:100%;
+        line-height:26px;
+    }
+    #footer .footers .footers-legal span{
+        display: block;
+        float: left;
+    }
+    #footer .footers .footers-legal .lianjie{
+        clear: both;
+    }
+    #footer .footers .footers-beian{
+        width:100%;
+        overflow: hidden;
+    }
+    #footer .footers .footers-legal .zhongguo{
+        display: block;
+        float: left;
+        overflow: hidden;
+    }
+}
